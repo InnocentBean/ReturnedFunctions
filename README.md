@@ -1,13 +1,18 @@
 # ReturnedFunctions
-inpu = input("What's your name? ")
+s = input("What's your name? ")
 
-def reverse():
-    global inpu
-    inpu = list(reversed(inpu))
-    return inpu
+def reverse(s):
+    tx = ""
+    for i in s:
+        tx = i + tx
+    return tx
+
+    
 
 def ready():
-    print("".join(inpu))
+    global s
+    print(reverse(s))
 
-reverse()
+
+reverse(s)
 ready()
